@@ -1,4 +1,5 @@
-# vue-test-cli
+# Learning Vue CLI
+> https://www.youtube.com/playlist?list=PLB7CpjPWqHOtYP7P_0Ls9XNed0NLvmkAh
 
 ## Project setup
 ```

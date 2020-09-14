@@ -5,6 +5,11 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+// 전역 컴포넌트 등록
+Vue.component('asdf', {
+
+})
+
 new Vue({
   router,
   store,
