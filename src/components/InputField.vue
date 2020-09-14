@@ -26,6 +26,8 @@ export default {
   methods: {
     updateName(e) {
       this.$emit("updateName", e.target.value);
+      //    for v-model
+      //   this.$emit("input", e.target.value);
     }
   }
 };

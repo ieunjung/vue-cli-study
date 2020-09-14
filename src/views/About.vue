@@ -1,8 +1,18 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <NameComponents :title="title" name="about name" />
-    <NameComponents />
+    <!-- <NameComponents :title="title" name="about name" /> -->
+    <!-- <NameComponents /> -->
+
+    <p>slot</p>
+    <NameComponents>
+      <template #header="props">
+        <p>hello header slot {{ props.random }}</p>
+      </template>
+      <template #default>
+        <p>hello default slot</p>
+      </template>
+    </NameComponents>
   </div>
 </template>
 
@@ -15,7 +25,7 @@ export default {
   },
   data() {
     return {
-      title: 5
+      title: "string title"
     };
   }
 };
