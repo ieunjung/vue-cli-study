@@ -1,7 +1,7 @@
 <template>
  <div>
    <h1>This is Home Page</h1>
-   <NameComponents />
+   <NameComponents title="home title" name="hone name" />
  </div>
 </template>
 
