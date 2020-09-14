@@ -1,23 +1,35 @@
 <template>
- <div>
-   <h1>This is Home Page</h1>
-   <NameComponents title="home title" name="hone name" />
- </div>
+  <div>
+    <h1>This is Home Page</h1>
+
+    <form action="">
+      <InputField :name="name" @updateName="updateName" />
+      <InputField v-model="name" />
+      <button>Submit</button>
+    </form>
+
+    {{ name }}
+  </div>
 </template>
 
 <script>
-import NameComponents from '@/components/NameComponents.vue';
+import InputField from "@/components/InputField.vue";
 
 export default {
-  components:{
-    NameComponents
+  components: {
+    InputField
   },
-  data(){
+  data() {
     return {
-      // name: 'initial name'
+      name: "initial name"
+    };
+  },
+  methods: {
+    updateName(name) {
+      this.name = name;
     }
   }
-}
+};
 </script>
 
 <style scoped>
