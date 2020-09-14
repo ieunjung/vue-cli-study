@@ -4,7 +4,7 @@
 
     <form action="">
       <InputField :name="name" @updateName="updateName" />
-      <InputField v-model="name" />
+      <!-- <InputField v-model="name" /> -->
       <button>Submit</button>
     </form>
 
@@ -28,6 +28,34 @@ export default {
     updateName(name) {
       this.name = name;
     }
+  },
+
+
+  beforeCreate(){
+    console.log('beforeCreate', this.name);
+  },
+  created(){
+    console.log('created', this.name);
+  },
+  beforeMount(){
+    console.log('beforeMount', this.name);
+  },
+  // dom 컨트롤 : mount
+  mounted(){
+    console.log('mounted', this.name);
+  },
+  beforeUpdate(){
+    alert('beforeUpdate', this.name);
+  },
+  updated(){
+    alert('updated', this.name);
+  },
+  // #app dom 내용이 바뀔 때
+  beforeDestroy(){
+    alert('beforeDestroy')
+  },
+  destroyed(){
+    alert('beforeDestroy')
   }
 };
 </script>

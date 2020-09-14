@@ -18,10 +18,10 @@ export default {
       required: true
     },
     // for v-model
-    value: {
-      type: String,
-      required: true
-    }
+    // value: {
+    //   type: String,
+    //   required: true
+    // }
   },
   methods: {
     updateName(e) {
